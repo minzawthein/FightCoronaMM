@@ -1,0 +1,95 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    position: relative;
+    background-image: url("../assets/images/covid19_map_banner.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.banner::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 0.1;
+} 
+
+.banner .corona-case .myanmar,
+.banner .corona-case .world{
+    position: relative;
+    display: block;
+    text-align: center;
+    z-index: 10;
+    box-sizing: border-box !important;
+}
+
+.banner .corona-case .myanmar a{
+    margin-top: 6em;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.banner .corona-case .myanmar h4,
+.banner .corona-case .world  h4{
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    width: 100%;
+    text-transform: uppercase;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    line-height: 3rem;
+    text-align: center;
+}
+.banner .corona-case .myanmar h4::before,
+.banner .corona-case .world h4::before{
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    bottom: 0;
+    background-color: #ffc107;
+    z-index: 1;
+    transition: all 0.5s;
+    transition-timing-function: ease;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+}
+
+/*@media only screen and (max-width: 768px){
+    .wrapper #main-navbar #navbar-collapse{
+        position: fixed;
+        left: 0;
+        bottom: 0; 
+    }
+    
+}*/
+
+@media only screen and (max-width: 768px){
+    #navbar-collapse{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        align-self: center;
+        background: white; 
+    }
+    
+}
